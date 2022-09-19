@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9/19 Participation(Fake Form)</title>
+</head>
+<body>
+
+    <h1>Hello, World! New web page, who is this?</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/IceeLogo.png" alt="icee logo"
+    <!--no method attrib so GET is used-->
+    <form action="submission.html" method="get">
+
+        <p>
+            <label for="first">First Name</label>
+            <input type="text" name="name_input" id="first" placeholder="First Name">
+        </p>
+        <p>
+            <label for="last">Last Name</label>
+            <input type="text" name="lname_input" id="last" placeholder="Last Name">
+        </p>
+
+        <p>
+            <label for="email">Email</label>
+            <input type="text" name="email_input" id="email" placeholder="Email" value="example@example.com">
+        </p>
+
+        <p>
+            <label>Say something kind</label>
+            <textarea name="kindbox" id="kindbox"
+            rows="5" placeholder="Enter multi line text here"></textarea>
+                     
+        </p>
+
+        <p>
+            <label>Are you happy?</label>
+            <input type="checkbox" name="happybox" id="happybox">
+
+        </p>
+        <p>
+            <label>What is your favorite color?</label>
+            <input type="color" name="favcolor">
+        </p>
+
+        <p>
+            <label>Do you like my form(1-5)</label>
+            <input type="radio" name="rating" value="0">
+            <input type="radio" name="rating" value="1">
+            <input type="radio" name="rating" value="2">
+            <input type="radio" name="rating" value="3">
+            <input type="radio" name="rating" value="4">
+            <input type="radio" name="rating" value="5">
+        </p>
+
+        <p>
+            <input type="submit"  id="name_input_submit" value="Submit Form">      
+        </p>
+
+
+
+    </form>
+
+
+
+
+    <a href="../../index.html">Back to Index</a>
+</body>
+</html>
