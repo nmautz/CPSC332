@@ -1,0 +1,17 @@
+li {
+    background-color: rgb(54, 17, 17);
+}
+
+.sub-header{
+    color: gold;
+
+}
+
+#main-header {
+    color: rgb(0, 255, 200);
+}
+
+#main-header:hover::after {
+    content: "BOO!";
+    background-color: orange;
+}
