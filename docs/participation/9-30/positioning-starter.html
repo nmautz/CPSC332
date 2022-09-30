@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9/30 Participation</title>
+
+
+
+  <style>
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      
+    }
+
+    #top, #middle, #bottom {
+      width: 40%;
+      padding: 50px;
+      border:  1px solid black;
+    }
+
+
+    #top{
+      position: relative;
+
+      background-color: red;
+      z-index: 1;
+      
+    }
+
+    #middle{
+      background-color: purple;
+      position: relative;
+
+      left: 50px;
+      top: -50px;
+      z-index: 2;
+
+    }
+
+    #bottom{
+      position: relative;
+      left: -100px;
+      top: -100px;
+
+      background-color: gold;
+
+      z-index: 3;
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+
+
+
+  <div id="top">Top (bottom?)</div>
+  <div id="middle">middle)</div>
+  <div id="bottom">bottom (top?)</div>
+
+
+
+
+
+  <a href="index.html">Back to Index</a>
+  
+  
+</body>
+</html>

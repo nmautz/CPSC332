@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Effects</title>
+
+  <style>
+
+    #fake-button {
+      text-align: center;
+      text-shadow: 5px 2px 20px red;
+      box-shadow: 5px 2px 5px blue;
+      font-size: xx-large;
+      border-radius: 50px 50px 120px 120px;
+      width: 100px;
+      height: 100px;
+
+      animation-name: changeSize;
+      animation-duration: 5ms;
+    
+
+    }
+
+
+    @keyframes changeSize {
+
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(0.5);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+      
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <a href="index.html">Back to Index</a>
+
+  <p id="fake-button">Click</p>
+
+  
+</body>
+</html>
