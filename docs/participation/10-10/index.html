@@ -57,6 +57,71 @@
         hello();
       }
 
+      let myarray = [0,1,2,3];
+
+
+      console.log("My Array!")
+      for(let i = 0; i < myarray.length-1; ++i){
+        console.log(myarray[i]);
+
+
+      }
+
+      for(let myVal of myarray.reverse()){
+        console.log(myVal);
+      }
+
+      myarray.forEach((num, index, array)=>{
+
+        console.log(num + " index:" + index + " array:["+ array+']')
+
+
+
+      })
+
+      console.log(myarray.sort((a,b)=>{
+        return a-b
+      }))
+
+      console.log("My Array Done!")
+
+
+      let obj = {
+
+
+        x: 5,
+
+        inc: ()=>{
+          return ++obj.x;
+        },
+
+        get number(){
+          return this.x + " running from a bear";
+        },
+
+        set number(num){
+          this.x = num;
+        }
+
+      }
+
+
+      console.log(obj.inc())
+      console.log(obj.x)
+      console.log(obj.number)
+
+      obj.number = 15;
+      console.log(obj.number)
+
+      let str = "hello world";
+
+      console.log("L at " + str.indexOf('l'));
+
+      let dateTimeNow = new Date();
+      console.log(dateTimeNow)
+
+
+
 
 
 
