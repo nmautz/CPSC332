@@ -123,6 +123,39 @@
 
 
 
+      try{
+        arrowAdd()
+      }catch(e){
+        console.error(e + "\n Safely caught")
+      }finally{
+        console.log("Finally")
+      }
+
+
+      let arrowAdd = (x,y,z)=>{
+        return x+y+z;
+      }
+
+
+
+      document.addEventListener("DOMContentLoaded", ()=>{
+        const time_p = document.getElementById("currentTime");
+        time_p.addEventListener("click", ()=>{
+
+          time_p.innerHTML= new Date()
+
+
+        })
+
+
+        time_p.innerHTML = "Click me to set time text"
+
+
+      })
+
+
+
+
 
 
     </script>
@@ -131,6 +164,7 @@
     <h1>Even More Javascript</h1>
     <a href="../../index.html">Back to Index</a>
 
+    <p id="currentTime"></p>
 
 
   </body>
