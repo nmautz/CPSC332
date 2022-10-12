@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>10/12 Participation</title>
     <style>
 
     </style>
@@ -29,6 +29,40 @@
             var unorderedList = document.getElementsByClassName("unordered-list");
             var allDivs = document.querySelectorAll("body div");
             var firstDiv = document.querySelector("body div");
+
+            let startbtn = document.getElementById("date-button-start");
+            let stopbtn = document.getElementById("date-button-stop");
+            let datespan = document.getElementById("date-span");
+
+            let timeoutID = null;
+
+            startbtn.addEventListener("click", ()=>{
+                console.log("Started");
+                datespan.innerHTML = new Date()
+
+                let timeout = ()=>{
+                    timeoutID = setTimeout(()=>{
+                    datespan.innerHTML = new Date();
+                    timeout();
+
+                    }, 1000)
+                }
+
+                timeout();
+
+
+            });
+
+            stopbtn.addEventListener("click", ()=>{
+                console.log("stopped");
+                clearTimeout(timeoutID);
+                datespan.innerHTML = "Click for the current Date-Time";
+
+
+
+
+
+            }); 
 
 
         }//end of onload function
