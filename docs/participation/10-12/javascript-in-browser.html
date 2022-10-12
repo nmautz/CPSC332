@@ -37,7 +37,6 @@
             let timeoutID = null;
 
             startbtn.addEventListener("click", ()=>{
-                console.log("Started");
                 datespan.innerHTML = new Date()
                 let timeout = ()=>{
                     timeoutID = setTimeout(()=>{
@@ -50,7 +49,6 @@
             });
 
             stopbtn.addEventListener("click", ()=>{
-                console.log("stopped");
                 clearTimeout(timeoutID);
                 datespan.innerHTML = "Click for the current Date-Time";
             }); 
