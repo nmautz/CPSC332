@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10/12 Participation</title>
+    <style>
+        #fieldset {
+            transition: all ease-in-out 150ms;
+        }
+
+        div{
+            transition:  all ease-in-out 150ms;
+        }
+    </style>
+    <!-- async loads the page at the same time as the script -->
+    <!-- <script src="script.js" async></script> -->
+    <!-- defer loads the script at the same time BUT script is not processed until the page loads-->
+    <!-- <script src="script.js" defer></script> -->
+    <script>
+        window.onload = function () {
+
+
+            //document represents the entire DOM
+            var thisDocument = document.getElementById("container");
+            //window object
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+            console.log(navigator.platform);
+
+            //"selecting" DOM elements so we can access them with JS
+            //var thisDocument = document.getElementById("container");
+            var listItems = document.getElementsByTagName("li");
+            var unorderedList = document.getElementsByClassName("unordered-list");
+            var allDivs = document.querySelectorAll("body div");
+            var firstDiv = document.querySelector("body div");
+
+            let startbtn = document.getElementById("date-button-start");
+            let stopbtn = document.getElementById("date-button-stop");
+            let datespan = document.getElementById("date-span");
+
+            let timeoutID = null;
+
+            startbtn.addEventListener("click", ()=>{
+                datespan.innerHTML = new Date()
+                let timeout = ()=>{
+                    timeoutID = setTimeout(()=>{
+                    datespan.innerHTML = new Date();
+                    timeout();
+
+                    }, 1000)
+                }
+                timeout();
+            });
+
+            stopbtn.addEventListener("click", ()=>{
+                clearTimeout(timeoutID);
+                datespan.innerHTML = "Click for the current Date-Time";
+            }); 
+
+
+            let mouseHover = document.getElementById("fieldset")
+            mouseHover.addEventListener("mouseover", ()=>{
+
+                mouseHover.style.backgroundColor = "lightgrey"
+
+                let divs = document.getElementsByTagName("div")
+
+                for (const div of divs){
+                    div.style.backgroundColor = "gold"
+                    div.style.setProperty("scale", "0.9")
+                }
+
+
+
+                document.styleSheets[0].insertRule("div{font-weight: bold;}")
+
+
+            })
+            mouseHover.addEventListener("mouseout", ()=>{
+
+                mouseHover.style.backgroundColor = "unset"
+
+                let divs = document.getElementsByTagName("div")
+
+                for (const div of divs){
+                    div.style.setProperty("background-color", "unset")
+                    div.style.setProperty("scale", "1")
+
+                }
+                document.styleSheets[0].deleteRule(document.styleSheets[4])
+
+
+            })
+
+            function removeDiv(){
+                if(document.getElementById("tmp-div") != null){
+                    document.getElementById("tmp-div").remove()
+                }
+            }
+
+            function addDiv(){
+                if(document.getElementById("tmp-div") == null){
+                    let newDiv = document.createElement("div");
+                    newDiv.id = "tmp-div";
+                    document.getElementById('container').appendChild(newDiv)
+                }
+            }
+
+
+        }//end of onload function
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        This is div content
+    </div>
+    <div>
+        <ul class="unordered-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+    <p>
+    <ul class="unordered-list">
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    </p>
+    <!-- #1 -->
+    <fieldset id="fieldset">
+        <legend>
+            <strong><em>JavaScript Clock</em></strong>
+        </legend>
+
+        <div>
+            <p>
+                <span id="date-span">
+                    Click for the current Date-Time
+                </span>
+            </p>
+            <!-- #3 -->
+            <p>
+                <button id="date-button-start">Start Clock</button>
+            </p>
+            <p>
+                <button id="date-button-stop">Stop Clock</button>
+            </p>
+        </div>
+    </fieldset>
+    <a href="../../index.html">Back to Index</a>
+
+</body>
+
+</html>
