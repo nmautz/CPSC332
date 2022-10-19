@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+
+  <script>
+    function Ball(radius, color){
+
+      this.radius = radius
+      this.color = color
+
+
+
+    }
+
+    Ball.prototype.draw = ()=>{
+      console.log("Draw")
+      
+    }
+
+
+    new Ball().draw()
+
+
+    let canvas = document.getElementById("myCanvas");
+
+    var amimFramId;
+    lastPostition = [0,0];
+
+
+    canvas,addEventListener("mouseover", ()=>{
+
+
+
+
+ 
+
+    })
+
+    function createAtMouseMove(){
+
+      var xVal = lastPostition[0].canvas.offsetLeft;
+      var yVal = lastPostition[1].canvas.offsetRight;
+    }
+
+    function createAtMouseClick(){
+
+    }
+
+  </script>
+
+  <style>
+    canvas{
+      width: 300px;
+      height: 300px;
+      background-color: grey;
+    }
+  </style>
+
+</head>
+<body>
+
+  <canvas>
+
+
+  </canvas>
+
+  <a href="./index.html">Back to index!</a>
+  
+</body>
+</html>
